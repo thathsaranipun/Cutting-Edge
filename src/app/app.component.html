@@ -1,4 +1,68 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="nav-item nav-link"routerLink="/" ><img src="assets/logo.png" style="height:auto;width: 70%;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    
+    <ul class="navbar-nav ml-auto ">
+
+      <li class="nav-item">
+        <a class="nav-item nav-link"routerLink="/fire-predictions" id="navLink" >Fire Predictions</a>  
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-item nav-link"routerLink="/past-forest-fires" id="navLink" >Past Forest Fires</a>
+       
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link"routerLink="/global-weather-data" id="navLink">Global WeatherData</a>
+       
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link"routerLink="/language-translator" id="navLink">Graphs </a>
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link"routerLink="/center" id="navLink">Support-Center </a>
+       
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-item nav-link"routerLink="/blog" id="navLink">Blog </a>
+        
+      </li>
+
+      <li class="nav-item">
+        <form class="form-inline">
+         
+          
+          <td *ngIf="changeLog(); else elseBlock" class="text-white"><b>
+            <a class="btn btn-primary" routerLink="/log-in" id="navLink"  (click)="LogOut()" style="width: 100px;">LogOut </a>
+          </b></td>
+    
+              <ng-template #elseBlock>
+                <a class="btn btn-primary"routerLink="/log-in" id="navLink" style="width: 100px;">LogIn </a>
+              </ng-template>
+          
+    
+          
+          
+          
+          
+        </form>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
  
 
 
@@ -12,10 +76,7 @@
       <a class="nav-item nav-link"routerLink="/language-translator" id="navLink">Graphs </a>
       <a class="nav-item nav-link"routerLink="/center" id="navLink">Support-Center </a>
       <a class="nav-item nav-link"routerLink="/blog" id="navLink">Blog </a>
-      <!-- <a class="btn btn-primary"routerLink="/log-in" id="navLink">LogIn </a> -->
-      <!-- <a class="nav-item nav-link"routerLink="/top" id="navLink" >Top Hotels </a>
-      <a class="nav-item nav-link" routerLink="/features" id="navLink">Features</a>
-      <a class="nav-item nav-link" routerLink="/prize"id="navLink">Hotel Price</a> -->
+    
     </div>
   </div>
   
@@ -26,9 +87,9 @@
        
     
   <nav class="navbar navbar-dark bg-dark">
-    <form class="form-inline">
+    <form class="form-inline"> -->
       <!-- <a class="btn btn-primary"routerLink="/log-in" id="navLink" style="width: 100px;">LogIn </a> -->
-      
+<!--       
       <td *ngIf="changeLog(); else elseBlock" class="text-white"><b>
         <a class="btn btn-primary" routerLink="/log-in" id="navLink"  (click)="LogOut()" style="width: 100px;">LogOut </a>
       </b></td>
@@ -36,15 +97,15 @@
           <ng-template #elseBlock>
             <a class="btn btn-primary"routerLink="/log-in" id="navLink" style="width: 100px;">LogIn </a>
           </ng-template>
-      
+       -->
 
       
         <!-- <a class="btn btn-primary"routerLink="/log-in" id="navLink" style="width: 100px;">LogIn </a> -->
       
       
-    </form>
+    <!-- </form>
   </nav>
-</nav>
+</nav> -->
 
 
 
