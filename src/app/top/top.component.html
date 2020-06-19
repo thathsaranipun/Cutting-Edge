@@ -1,0 +1,162 @@
+
+  <div style="width:100%; height: 60px;">
+    <!-- Content here -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner" >
+        <div class="carousel-item active" >
+          <img src="assets/719970.jpg" style="height:100%;" class="d-block w-100 p3" alt="slide show">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:22px;">Albert Einstein</h5>
+            <p style="font-size: 18px;">The most beautiful gift of nature is that it gives one pleasure to look around and try to comprehend what we see.</p>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <img src="assets/trees-smoke-fire-forest-fire.jpg" class="d-block w-100" alt="slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:22px;">Ralph Waldo Emerson</h5>
+            <p style="font-size: 18px;">Adopt the pace of nature. Her secret is patience.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/2012_57991_138834.jpg" style="height:150%;" class="d-block w-100" alt="slide show">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:22px;">Jonathon Porritt</h5>
+            <p style="font-size: 18px;">Humankind’s greatest priority is to reintegrate with the natural world.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="assets/Forest-fire-wallpaper-HD6.jpg" style="height: 120%;" class="d-block w-100" alt="slide show">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:22px;">Dante Alighieri</h5>
+            <p style="font-size: 18px;">Nature is the art of God.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/768373485.jpg" class="d-block w-100" alt="slide show">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-size:22px;">Ted Trueblood</h5>
+            <p style="font-size: 18px;">The silence of nature is very real. It surrounds you, you can feel it.</p>
+          </div>
+        </div>
+      </div>
+      
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+  
+  <div class="row bg-secondary" style="margin-top:690px;">
+    <a href="" class="col bg-dark" style="margin-right:1px;">
+      <!-- <div class="card text-white text-center bg-dark" > -->
+        <div class="card-body text-white text-center bg-dark">
+          <h5 id="b-slide-link" class="card-title">Notification</h5>
+          <p style="font-size: 18px;" class="card-text">Notification On or Off</p>
+
+
+          <div *ngIf="notificationLog(); else elseBlock" class="text-white"><b>
+            <a id="b-slide-link" href="/message" class="btn btn-primary" disabled>Notification</a>
+
+          </b></div>
+          <ng-template #elseBlock>
+            <a id="b-slide-link" href="/log-in" class="btn btn-primary" disabled>Notification</a>
+          </ng-template>
+
+
+
+
+
+
+
+
+
+
+        </div>
+      <!-- </div> -->
+    </a>
+    <a href="" class="col bg-dark" style="margin-right: 2px; margin-left:1px;">
+      <!-- <div class="card text-white text-center bg-dark"> -->
+        <div class="card-body text-white text-center bg-dark">
+          <h5 id="b-slide-link" class="card-title">Real Time Forest Fire Map</h5>
+          <p style="font-size: 18px;" class="card-text">Check out current Forest Fires in the World</p>
+          <a id="b-slide-link" href="/past-forest-fires" class="btn btn-primary" disabled>View Map</a>
+        </div>
+      <!-- </div> -->
+    </a>
+    <!-- <a href="" class="col bg-dark" style="margin-right:2px; margin-left:1px;"> -->
+      <a href="" class="col bg-dark" class="m">
+      <!-- <div class="card text-white text-center bg-dark"> -->
+        <div class="card-body text-white text-center bg-dark" >
+          <h5 id="b-slide-link" class="card-title">Review Us</h5>
+          <p style="font-size: 18px;" class="card-text">You can review your idea of this system</p>
+          <a id="b-slide-link" href="/page-review" class="btn btn-primary " >Add Review</a>
+        </div>
+      <!-- </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <!-- <ul class="nav justify-content-center">
+  <span class="border-bottom">
+  <img src="assets/SL-About-The-Shangri-La-Group.jpg" alt="..." class="rounded-sm">
+  </span>
+  </ul>
+  
+  
+   -->
+
+<div class="row" style="margin-top: 3px;">
+   <div class="col-sm-4">
+    <img src="assets/amazon-fires-825.jpg" class="card-img-top" alt="..." style="height:250px; size: 100%;">
+    <div class="card-body bg-light">
+      <h5 class="card-title">Amazon had burnt</h5>
+      <p class="card-text" style="text-align: justify;">When the burning of the Amazon was at its peak in August, there were thousands of individual fires, almost three times as many that month - 30,901 - compared with the same period last year.What caused this? Forest fires do happen in the Amazon during the dry season between July and October. </p>
+      <a href="https://www.thecut.com/2019/08/how-much-of-the-amazon-rainforest-has-burned.html" class="btn btn-primary">View Original Post</a>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <img src="assets/1164446768.jpg.0.jpg" class="card-img-top" alt="..." style="height:250px; size: 100%;">
+    <div class="card-body bg-light">
+      <h5 class="card-title">California Wildfires</h5>
+      <p class="card-text" style="text-align: justify;">According to the US Forest Service and the California Department of Forestry and Fire Protection, there have been over 6,190 fires reported in 2019. These fires have consumed an estimated 198,392 acres of land thus far and destroyed countless homes, schools, farms, forests, and businesses in the process.</p>
+      <a href="https://www.nationalgeographic.com/environment/2018/11/how-california-fire-catastrophe-unfolded/" class="btn btn-primary">View Original Post</a>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <img src="assets/Australia_fires_img.jpg"  class="card-img-top" alt="..." style="height:250px; size: 100%;">
+    <div class="card-body bg-light">
+      <h5 class="card-title">Australia fires</h5>
+      <p class="card-text" style="text-align: justify;">Record-breaking temperatures and months of severe drought have fuelled a series of massive bushfires across Australia.Hot and windy conditions are forecast to return to many parts of New South Wales this weekend. ACT have declared a state of emergency as massive bushfires rage south of Canberra.</p>
+      <a href="https://globaledge.msu.edu/blog/post/56791/will-the-amazon-rainforest-fire-burn-down-the-economy--" class="btn btn-primary">View Original Post</a>
+    </div>
+  </div>
+</div>
+
+
+
+  

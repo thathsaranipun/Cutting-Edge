@@ -1,0 +1,61 @@
+<!-- <h1>Inferno</h1>
+<p><a href="https://angular-maps.com/" target="_blank">Official Website</a></p> -->
+
+<agm-map style="height:800px;"
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false"
+ 
+  >
+
+  <agm-marker 
+      *ngFor="let m of markers; let i = index"
+      (markerClick)="clickedMarker(m.label, i)"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      [iconUrl] ="
+      {
+        url: 'https://gifimage.net/wp-content/uploads/2017/09/animated-fire-gif-transparent-background-2.gif',
+        scaledSize: {
+            width: 60,
+            height:70
+        }
+      }"
+      (dragEnd)="markerDragEnd(m, $event)">
+
+      <!-- <agm-direction ... 
+[renderOptions]="renderOptions" 
+[markerOptions]="markerOptions">
+</agm-direction> -->
+      
+<agm-info-window>
+  <strong>
+    <ul>
+      <h3>Forest Fire Risk for Next 24H</h3>
+      <li>Predicted Temperature  -  {{forestFireDetails[i].temperature}}</li>
+      <li>Predicted Wind Speed  -  {{forestFireDetails[i].windSpeed}}</li>
+      <li>Predicted Relative Humidity  -  {{forestFireDetails[i].relativeHumidity}}</li>
+      <li>FWI Value  -  {{forestFireDetails[i].relativeHumidity}}</li>
+      <li><h4 style="color: crimson;">Forest Fire Risk  -  {{forestFireDetails[i].risk}}</h4></li>
+      <li><h4 style="color: rgb(245, 100, 3);">Estimate Spread Area  - {{forestFireDetails[i].spreads}}</h4></li>
+      <li><a href="/prize">Browse More Details</a></li>
+    </ul>
+  </strong>
+</agm-info-window>
+    
+  </agm-marker>
+  
+  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+      [radius]="5000"
+      [fillColor]="'red'"
+      [circleDraggable]="true"
+      [editable]="true">
+  </agm-circle>
+
+</agm-map>
+
+<!-- (mapClick)="mapClicked($event)" -->

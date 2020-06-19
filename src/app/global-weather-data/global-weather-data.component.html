@@ -1,0 +1,86 @@
+
+
+
+
+
+<div class ="row">
+  <div id="img" style="background-image: url('https://i0.wp.com/winnyweatherwatch.com/wp-content/uploads/2018/12/clouds-dark-dark-clouds-416920-e1543806562950.jpg?resize=1000%2C480&ssl=1'); background-size:100%;">
+<div class="col-md-6 offset-md-3">
+      <div *ngIf="weather; else waiting">
+      <div class="col-sm-12 text-center">
+          
+          <br>
+          <nav class="navbar navbar-dark bg-dark">
+              <a class="navbar-brand" >Search your location </a>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" #userInput placeholder="Enter city name" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="getCity(userInput.value)">Search</button>
+              </form>
+          </nav>
+          
+
+
+          
+
+          <em><h5 class="text-white">Current Weather and forecasts in your city</h5></em>
+          <h2 class="text-white">Weather in   {{weather.name}},{{weather.sys.country}}</h2>
+      </div>
+
+      
+          <div class="container" >
+      <div class="col-sm-12"class="text-white">
+          <span class="temp" ><img src="assets/{{weather.weather[0].icon}}@2x.png" alt="01d.png">
+         <h2 >{{weather.main.temp | number:'1.0-0'}} &#176;F</h2> 
+      </span>
+        
+          <h2><em><p   class="text-white">{{weather.weather[0].description}}</p></em></h2>
+
+      
+  </div>
+  </div>
+      <table class="table table-striped table-dark">
+          <tbody>
+              <tr>
+                  <td>Humidity</td><td>{{weather.main.humidity}}%</td>
+              </tr>
+              <tr>
+                  <td>Pressure</td><td>{{weather.main.pressure}}hpa</td>
+              </tr>
+              <tr>
+                  <td>Sunrise</td><td>{{weather.sys.sunrise * 1000 | date:'H:mm'}}</td>
+              </tr>
+              <tr>
+                  <td>Sunset</td><td>{{weather.sys.sunset *1000 |date:'H:mm'}}</td>
+              </tr>
+              <tr>
+                  <td>Geo coords</td><td>[{{weather.coord.lat }},{{weather.coord.lon}}]</td>
+              </tr>
+          </tbody>
+          
+      </table>
+  </div>
+</div>
+
+      <agm-map [latitude]="lat" [longitude]="lon">
+          <agm-marker [latitude]="lat" [longitude]="lon"></agm-marker>
+          </agm-map>
+      
+  
+  <ng-template #waiting>
+      <div class="text-center">
+          <br>
+          <br>
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+  </ng-template>
+</div>  
+
+
+
+
+
+
+
+

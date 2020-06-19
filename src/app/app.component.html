@@ -1,0 +1,130 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+ 
+
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+
+      <a class="nav-item nav-link"routerLink="/" style="font-size: 24px; font-family: cursive;" ><img src="assets/logo.png" style="height:50px;"></a>
+      <a class="nav-item nav-link"routerLink="/fire-predictions" id="navLink" >Fire Predictions</a>
+      <a class="nav-item nav-link"routerLink="/past-forest-fires" id="navLink" >Past Forest Fires</a>
+      <a class="nav-item nav-link"routerLink="/global-weather-data" id="navLink">Global WeatherData</a>
+      <a class="nav-item nav-link"routerLink="/language-translator" id="navLink">Graphs </a>
+      <a class="nav-item nav-link"routerLink="/center" id="navLink">Support-Center </a>
+      <a class="nav-item nav-link"routerLink="/blog" id="navLink">Blog </a>
+      <!-- <a class="btn btn-primary"routerLink="/log-in" id="navLink">LogIn </a> -->
+      <!-- <a class="nav-item nav-link"routerLink="/top" id="navLink" >Top Hotels </a>
+      <a class="nav-item nav-link" routerLink="/features" id="navLink">Features</a>
+      <a class="nav-item nav-link" routerLink="/prize"id="navLink">Hotel Price</a> -->
+    </div>
+  </div>
+  
+  
+
+
+        
+       
+    
+  <nav class="navbar navbar-dark bg-dark">
+    <form class="form-inline">
+      <!-- <a class="btn btn-primary"routerLink="/log-in" id="navLink" style="width: 100px;">LogIn </a> -->
+      
+      <td *ngIf="changeLog(); else elseBlock" class="text-white"><b>
+        <a class="btn btn-primary" routerLink="/log-in" id="navLink"  (click)="LogOut()" style="width: 100px;">LogOut </a>
+      </b></td>
+
+          <ng-template #elseBlock>
+            <a class="btn btn-primary"routerLink="/log-in" id="navLink" style="width: 100px;">LogIn </a>
+          </ng-template>
+      
+
+      
+        <!-- <a class="btn btn-primary"routerLink="/log-in" id="navLink" style="width: 100px;">LogIn </a> -->
+      
+      
+    </form>
+  </nav>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+
+
+    
+    
+
+
+
+
+
+
+      <!-- Site footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Inferno is Future Forest fire prediction application.It Predicts Forest fires based on
+                global weather statistics.The Purpose of this is to save forests mainly and save propoerties and minimize the cost to 
+                extinguish these wild fires. Inferno is a mainly a research base application. The useres are able to see predicted forest fires
+                and predicted weather statistics. And also to Pro-Usres and for the Organizations they are able to active Pre-Notification System from the Inferno.              
+                </p>
+            </div>
+  
+            
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+              
+
+               
+                <li><a href="/pageaboutus">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="http://scanfcode.com/sitemap/">Address</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by @CodeBrigade
+           <!-- <a href="#">Scanfcode</a>. -->
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="https://www.google.com/search?q=facebook+login&oq=facebook+login&aqs=chrome..69i57j0l7.4223j1j7&sourceid=chrome&ie=UTF-8"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="twitter"  href="https://www.google.com/search?q=twitter+login&oq=twitter+&aqs=chrome.2.69i57j35i39j0l2j69i60l4.5054j0j7&sourceid=chrome&ie=UTF-8"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="https://www.google.com/search?q=github+sign+up&oq=github+sign&aqs=chrome.0.69i59j69i57j0l6.5308j0j7&sourceid=chrome&ie=UTF-8"><i class="fab fa-github"></i></a></li>
+                <li><a class="linkedin" href="https://www.google.com/search?q=linkedin+login&oq=linkedin+login&aqs=chrome..69i57j0l7.7719j1j7&sourceid=chrome&ie=UTF-8"><i class="fab fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+ 
