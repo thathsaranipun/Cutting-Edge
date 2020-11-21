@@ -1,0 +1,128 @@
+<div id="img" style="background-image: url('https://images.wallpaperscraft.com/image/leaves_green_dark_145996_1920x1080.jpg'); background-size:100%;">
+
+
+<div class="container">
+<div class="card wow fadeInRight" data-wow-delay="0.8s">
+
+    <div class="omb_login">
+    	<h3 class="omb_authTitle"><a href="/log-in">Login</a> or <a href="/register">Sign up</a></h3>
+		<div class="row omb_row-sm-offset-3 omb_socialButtons">
+    	    <div class="col-xs-4 col-sm-2">
+		        <a href="https://www.google.com/search?q=facebook+login&oq=facebook+login&aqs=chrome..69i57j0l7.4223j1j7&sourceid=chrome&ie=UTF-8" class="btn btn-lg btn-block omb_btn-facebook">
+			        <i class="  fab fa-facebook-f "></i> <br>   
+			        <span class="hidden-xs">Facebook</span>
+		        </a>
+	        </div>
+        	<div class="col-xs-4 col-sm-2">
+		        <a href="https://www.google.com/search?q=twitter+login&oq=twitter+&aqs=chrome.2.69i57j35i39j0l2j69i60l4.5054j0j7&sourceid=chrome&ie=UTF-8" class="btn btn-lg btn-block omb_btn-twitter">
+			        <i class="fab fa-twitter"></i><br>
+			        <span class="hidden-xs">Twitter</span>   
+		        </a>
+	        </div>	
+        	<div class="col-xs-4 col-sm-2">
+		        <a href="https://www.google.com/search?q=google+plus+login&oq=google+plus&aqs=chrome.2.69i64j69i57j0l3.5149j1j7&sourceid=chrome&ie=UTF-8" class="btn btn-lg btn-block omb_btn-google">
+			        <i class=" fab fa-google"></i> <br>  
+			        <span class="hidden-xs">Google+</span>
+		        </a>
+	        </div>	
+		</div>
+
+		<!-- <div class="row omb_row-sm-offset-3 omb_loginOr">
+			<div class="col-xs-12 col-sm-6">
+				<hr class="omb_hrOr">
+				<span class="omb_spanOr">or</span>
+			</div>
+		</div> -->
+    <div class="signup-form">
+        
+            <h2 class="qo">Sign up</h2>
+            <p class="hint-text">Create your Inferno account. It's free and only takes a minute.</p>
+            <div class="form-group">
+
+            <!-- <form class="loginForm"> -->
+            
+            <div class="form-group">
+                
+                    <div class="col-xs-6"><input type="text"  class="form-control " name="firstName" placeholder="First Name" required="required" [formControl]="lastNameFormControl"></div>
+
+            </div>
+            
+            
+            
+            <div class="form-group">        
+                    <div class="col-xs-6"><input type="text" class="form-control" name="lastName" placeholder="Last Name" required="required" [formControl]="firstNameFormControl"></div>
+                      	
+            </div>
+            <div class="form-group" >
+                <input type="address" class="form-control" name="address" placeholder="Address" required="required"  [formControl]="addressFormControl">     
+            </div>
+            <div class="form-group" >
+
+                <input type="contact " class="form-control" name="contact " placeholder="contact " required="required" [formControl]="contactFormControl"  ngModel maxlength="10">
+                          
+            </div>
+            <div class="form-group">
+                <input type="nic" class="form-control" name="nic" placeholder="Nic" required="required" [formControl]="nicFormControl" >
+                <div *ngIf="nicFormControl.hasError('nic') && !nicFormControl.hasError('required')">
+                    Please enter a valid email address
+                </div>
+                
+            </div>
+            
+           
+            <div class="form-group">
+                
+            
+                
+                <input type="email" class="form-control" name="email" placeholder="Email" required="required"  [formControl]="emailFormControl">
+            
+
+                <div *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')" class="text-white">
+                   Please enter a valid email address
+                </div>
+                <!-- <div *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </div> -->
+         
+
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required" [formControl]="passwordFormControl" >
+                
+            </div>
+
+
+            <div class="form-group">
+                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required"  >
+            </div>        
+            <div class="form-group">
+                <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#"></a>  Terms of Use Privacy Policy</label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" routerLink="/payment"  (click)="register()" >Register Now</button>
+            </div>
+            
+        
+        <div class="text-center">Already have an account? <a class="badge badge-dark" type ="button" routerLink="/log-in" id="navLink" style="width: 100px;">Sign in </a>
+            </div>
+            <!-- </form> -->
+        </div>
+   
+    
+</div>
+
+
+    <!-- </div> -->
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

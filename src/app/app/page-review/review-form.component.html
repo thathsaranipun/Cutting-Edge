@@ -1,0 +1,148 @@
+
+<div class="card my-5" id="login"   style="background-image: url('https://images2.alphacoders.com/598/598932.jpg'); background-size:100%;">
+<div class="container" >
+
+
+   
+        <div class="card-body"  >
+    
+            <h5 class="type"  class="text-white"><b>Comment Us</b></h5>
+    
+            <form #revireForm="ngForm">
+
+                    <div class="form-group">
+                            <label for="name"  class="text-white">Full Name</label>
+                            <input type="text"
+                             [(ngModel)]='commets.fullName'
+                              class="form-control"
+                              placeholder="Enter Your Full Name"
+                              id="fullName"
+                              name="fullName" >     
+                    </div>
+                    <!-- <div [hidden]="!fullName.pristine" class="alert alert-danger">Full Name is Required</div>  -->
+
+
+                    <div class="form-group">
+                            <label for="name"  class="text-white">Email</label>
+                            <input type="email"
+                              [(ngModel)]='commets.email'
+                              class="form-control"
+                              placeholder="Enter Your Email Address"
+                              id="email"
+                              name="email" >     
+                    </div>
+                    <!-- <div [hidden]="!email.pristine" class="alert alert-danger">Email is Required</div>  -->
+
+                    <div class="form-group">
+                            <label for="name"  class="text-white">Comment</label>
+                            <textarea
+                              [(ngModel)]='commets.comment'
+                              class="form-control"
+                              placeholder="Enter Your Comment"
+                              required #comment="ngModel"
+                              id="comment"
+                              name="comment" > </textarea>    
+                    </div>
+                    <div [hidden]="!comment.pristine" class="alert alert-danger"  class="text-white">Comment is Required</div>
+
+
+                    <button type="submit" 
+                    class="btn btn-info" (click)="onSubmit()" [disabled]="!revireForm.form.valid"  >Submit</button>
+
+            </form>
+
+
+           
+
+          
+            <div class="form-group" id="rating">
+                        <!-- <h5 class="type"><b>Rate Us</b></h5>    
+                        <br>
+                        <star-rating value="0" checkedcolor="orange" uncheckedcolor="gray" size="40px" readonly="false" (rate)="onRate($event)"></star-rating>
+                        <br>
+                        <h5 class="type"><b>Contact Us</b></h5>
+                        <br> -->
+
+                        <img id="img" src="https://www.accuwebhosting.com/blog/wp-content/uploads/2017/04/Buffer-sample-buttons.png"/>
+                        
+            </div>
+
+          
+        </div>
+
+
+
+
+
+                <!-- <div *ngFor="let CommentList of display">
+               
+                <div class="panel-body">
+                {{CommentList.fullName}}
+              
+                </div> -->
+                
+
+
+
+               
+                <div class="card text-center" style="background-image: url('https://wallpapercave.com/wp/wp2632440.jpg'); background-size:100%;">
+                        
+                        <div class="card-body">
+                          <h2 class="card-title" class="text-white">Comments</h2>
+                        
+                          <p class="card-text">
+
+                                <table class="table table-hover table" >
+                                        <thead>
+                                            <tr class="p-3 mb-2 bg-secondary text-white">
+                                              
+                                                <!-- <th scope="col">Email</th>
+                                                <th scope="col">Comments</th> -->
+                            
+                                      
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                      
+                                                
+                                            <tr  *ngFor="let CommentList of display">
+                                                <td class="text-white"><b> {{CommentList.fullName}}    </b></td>
+                                                <td class="text-white"><b> {{CommentList.email}}    </b></td>
+                                                <td class="text-white"><b> {{CommentList.comment}}</b></td>
+                                                <td class="text-white"><b> {{CommentList.updatedAt | date:'medium'}}</b></td>
+                                              
+                                               
+                                            </tr>
+                                        </tbody>
+                                      </table>
+              
+                              
+                               
+                               
+
+
+
+                        
+                
+
+                
+                      <br>
+
+
+
+
+
+
+
+
+
+
+                     
+
+
+
+
+
+
+</div>
+</div>

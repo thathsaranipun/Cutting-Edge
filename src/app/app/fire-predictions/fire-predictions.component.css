@@ -1,0 +1,18 @@
+agm-map {
+    height: 500px;
+    
+  }
+  
+  /* agm-marker{
+      /* color: aliceblue; */
+       /* icon:'https://maps.google.com/mapfiles/kml/shapes/'  */
+  /* } */ */
+  
+  
+  * {
+    font-family: Lato;
+  }
+  
+  a {
+    color: darkblue;
+  }

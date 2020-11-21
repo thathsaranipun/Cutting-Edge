@@ -1,0 +1,32 @@
+.carousel-item{
+    width:100%;
+    height: 750px !important;
+    position: relative;
+    top: 100 px;
+  
+    left: 0px;
+  
+  
+}
+
+.carousel-item.img{
+    width: 100%;
+}
+
+#b-slide-link{
+        font-size: 20px;
+        
+}
+
+#slide-link:hover{
+    transform: scale(1.05); 
+}
+
+
+
+
+.m{
+    width: 40em;
+    
+
+}

@@ -1,0 +1,100 @@
+
+
+
+<div id="img" style="background-image: url('https://images.wallpaperscraft.com/image/leaves_plant_dark_131528_3840x2400.jpg'); background-size:100%;">
+<br>
+<div class="form-group">
+  <div class="search-hero">
+  <input type="text" class="form-control" placeholder="&#61442; Search Here" [(ngModel)]="term" >
+</div>
+</div>
+<div class="container">
+<table class="table table-hover table" >
+  <thead>
+      <tr class="p-3 mb-2 bg-secondary text-white">
+        <th scope="col">Date</th>
+          <th scope="col">Temperature</th>
+          <th scope="col">Relative Humidity</th>
+          <th scope="col">Wind Speed</th>
+          <th scope="col">Spreads</th>
+          <th scope="col">Risk</th>
+
+      </tr>
+  </thead>
+  <tbody >
+
+    
+      <tr *ngFor="let predictlist of predictionStore | filter:term">
+          <td class="text-white"><b>{{predictlist.date | date:'longDate'}}</b></td>
+          <td class="text-white"><b>{{predictlist.temperature}}</b></td>
+          <td class="text-white"><b>{{predictlist.relativeHumidity}}</b></td>
+          <td class="text-white"><b>{{predictlist.windSpeed}}</b></td>
+          <td *ngIf=" changespre(predictlist.risk); else elseBlock" class="text-white"><b>NAN</b></td>
+
+          <ng-template #elseBlock>
+            <td class="text-white"><b>{{predictlist.spreads}}</b></td>
+          </ng-template>
+         
+          <td class="text-danger"><b><h5>{{predictlist.risk | uppercase }}</h5></b></td>
+      </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h1>
+  <button (click)="toggleOn =!toggleOn">Low Risk </button>
+</h1>
+<div *ngIf="!toggleOn">
+
+  <div class="container">
+    <table class="table table-hover table-dark" >
+      <thead>
+          <tr class="p-3 mb-2 bg-secondary text-white">
+            <th scope="col">Date</th>
+              <th scope="col">Temperature</th>
+              <th scope="col">Relative Humidity</th>
+              <th scope="col">Wind Speed</th>
+              
+              <th scope="col">Risk</th>
+    
+          </tr>
+      </thead>
+      <tbody >
+
+
+  <tr *ngFor="let predictLow of predictFireLow | filter:low risk">
+    <td >{{predictLow.date | date:'longDate'}}</td> -->
+    <!-- <td >{{predictLow.temperature}}</td>
+    <td >{{predictLow.relativeHumidity}}</td>
+    <td >{{predictLow.windSpeed}}</td>
+    <td class="text-danger"><b><h5>{{predictLow.risk | uppercase }}</h5></b></td>
+</tr>
+
+<tbody >
+<h2></h2>
+
+
+<hr>
+<p>Today is Friday and this is a dummy text element to make you feel better</p>
+<p>Understanding the ngIf directive with the else clause</p>  -->
+
+
+
+
+
+
+
+
